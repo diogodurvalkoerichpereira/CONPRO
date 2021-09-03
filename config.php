@@ -14,10 +14,10 @@ $banco = 'contabil';
 
 /*
 //VARIAVEIS DO BANCO DE DADOS
-$servidor = 'sh-pro24.hostgator.com.br';
-$usuario = 'hugocu75_lojahug';
-$senha = 'hugo_loja';
-$banco = 'hugocu75_loja';
+$servidor = '';
+$usuario = '';
+$senha = '';
+$banco = '';
 */
 
 //VARIAVEIS DO SITE
