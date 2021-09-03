@@ -1,5 +1,5 @@
 <?php
-<?php require_once("../cabecalho.php");   ?>
+
  @session_start();
 
 if($_SESSION['nivel_usuario'] != 'Profissional'){
@@ -265,7 +265,7 @@ if($_SESSION['nivel_usuario'] != 'Profissional'){
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2020 <a href="http://adminlte.io">Hugo Vasconcelos</a>.</strong>
+    <strong>Copyright &copy; 2021 - DDKP - <a href="http://adminlte.io">Diogo Durval Koerich Pereira</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0
