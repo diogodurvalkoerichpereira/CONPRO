@@ -1,12 +1,11 @@
-<?php
-
+<?php require_once("../cabecalho.php");   ?>
  @session_start();
-
+ <?php
 if($_SESSION['nivel_usuario'] != 'Estudante'){
     echo "<script language='javascript'>window.location='../login.php'; </script>";
 }
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,7 +14,7 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Painel do Cliente</title>
+  <title>Estudante</title>
 
  <link rel="icon" href="../images/favicon-nova.ico" type="image/x-icon">
   <!-- Font Awesome Icons -->
@@ -40,30 +39,27 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Pedidos</a>
+        <a href="#" class="nav-link">Cliente</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contas</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Categoria de Contas</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Lançamentos</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Relatórios</a>
       </li>
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Buscar" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+   
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fas fa-sign-out-alt"></i>
-          
-        </a>
+  
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
@@ -108,7 +104,7 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
      
-      <span class="brand-text font-weight-light ml-4">Painel Cliente</span>
+    
    
     </a>
 
@@ -134,7 +130,7 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Home
+                Contas
                 
               </p>
             </a>
@@ -146,7 +142,28 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
-                Pedidos
+                Categoria de Contas
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Lançamentos
+                
+              </p>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Relatórios
                 
               </p>
             </a>
@@ -174,14 +191,17 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Início</li>
+            
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+
+
+
+
 
     <!-- Main content -->
     <section class="content">
@@ -265,10 +285,10 @@ if($_SESSION['nivel_usuario'] != 'Estudante'){
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021 - DDKP - <a href="http://adminlte.io">Diogo Durval Koerich Pereira</a>.</strong>
+    <strong>Copyright &copy; 2021 <a href="">Diogo Durval Koerich Pereira</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
+      <b>Version</b> 0.0.1
     </div>
   </footer>
 </div>

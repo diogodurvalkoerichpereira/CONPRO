@@ -1,4 +1,28 @@
-<?php require_once("../cabecalho.php");   ?>
+<?php
+ require_once("../cabecalho.php");   
+ @session_start();
+ include_once("../conexao.php");
+
+if($_SESSION['nivel_usuario'] != 'Admin'){
+    echo "<script language='javascript'>window.location='../login.php'; </script>";
+}
+
+//ESTRUTURA DO MENU
+$item1 = 'home';
+$item2 = 'produtos';
+$item3 = 'categorias';
+
+
+//CLASSE PARA OS ITENS ATIVOS
+if(@$_GET['acao'] == $item1){
+          $item1ativo = 'active';
+        }else if(@$_GET['acao'] == $item2){
+          $item2ativo = 'active';
+        }else if(@$_GET['acao'] == $item3){
+          $item3ativo = 'active';
+        }
+
+ ?>
 
 <main class="container">
   <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
@@ -81,7 +105,20 @@
   </div>
 </main>
 
+<?php 
+        if(@$_GET['acao'] == $item1){
+          include_once($item1.'.php');
+        }else if(@$_GET['acao'] == $item2){
+          include_once($item2.'.php');
+        }else if(@$_GET['acao'] == $item3){
+          include_once($item3.'.php');
+        }
 
+
+        else{
+          include_once($item1.'.php');
+        }
+        ?>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       <script src="offcanvas.js"></script>
