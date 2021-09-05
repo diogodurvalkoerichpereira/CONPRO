@@ -21,7 +21,11 @@ if(@$_GET['acao'] == $item1){
         }else if(@$_GET['acao'] == $item3){
           $item3ativo = 'active';
         }
-
+     
+      
+    
+     
+             
  ?>
 
 <main class="container">
@@ -105,20 +109,7 @@ if(@$_GET['acao'] == $item1){
   </div>
 </main>
 
-<?php 
-        if(@$_GET['acao'] == $item1){
-          include_once($item1.'.php');
-        }else if(@$_GET['acao'] == $item2){
-          include_once($item2.'.php');
-        }else if(@$_GET['acao'] == $item3){
-          include_once($item3.'.php');
-        }
 
-
-        else{
-          include_once($item1.'.php');
-        }
-        ?>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       <script src="offcanvas.js"></script>

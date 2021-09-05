@@ -86,24 +86,14 @@ include_once("conexao.php");
                              
                             </p></span> 
          </form>
+         
         </div>
       </div>
-      <p></p><p></p>
+  
     </nav>
-    <p></p><p></p><p></p>
-    <div class="nav-scroller bg-body shadow-sm">
-      <nav class="nav nav-underline" aria-label="Secondary navigation">
-        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-        <a class="nav-link" href="#">
-          Friends
-          <span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
-        </a>
-        <a class="nav-link" href="#">Explore</a>
-        <a class="nav-link" href="#">Suggestions</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
+    <p></p>
+ 
+        
       </nav>
+      
     </div>

@@ -5,12 +5,8 @@ require_once("../../conexao.php");
 
 
 $nome = $_POST['nome'];
+$contas = $_POST['contas'];
 
-$nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "-", 
-        strtr(utf8_decode(trim($nome)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"),
-        "aaaaeeiooouuncAAAAEEIOOOUUNC-")) );
-
-$nome_url = preg_replace('/[ -]+/' , '-' , $nome_novo);
 
 
 //SCRIPT PARA FOTO NO BANCO
@@ -19,9 +15,15 @@ $nome_url = preg_replace('/[ -]+/' , '-' , $nome_novo);
 
 
 
+if($contas == ''){
+	echo "Preencha a Descrição!!";
+	exit();
+}
 
-
-
+if($nome == ''){
+	echo "Preencha o Valor!";
+	exit();
+}
 
 
 
@@ -36,11 +38,11 @@ $nome_url = preg_replace('/[ -]+/' , '-' , $nome_novo);
 	}
 
 
-	$res = $pdo->prepare("INSERT into categorias (nome) values (:nome)");
+	$res = $pdo->prepare("INSERT into categorias (nome, contas) values (:nome, :contas)");
 
-	
+
 	$res->bindValue(":nome", $nome);
-
+	$res->bindValue(":contas", $contas);
 	
 	$res->execute();
 

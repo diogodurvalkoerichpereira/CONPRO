@@ -11,10 +11,12 @@ echo '
 <table class="table table-sm mt-3 tabelas">
 	<thead class="thead-light">
 		<tr>
+		<th scope="col">Id</th>
 			<th scope="col">Nome</th>
 			
-			<th scope="col">Contas</th>
-	
+			<th scope="col">Conta</th>
+			
+			<th scope="col">Ações</th>
 		</tr>
 	</thead>
 	<tbody>';
@@ -51,7 +53,7 @@ echo '
 		$num_total = count($dados_total);
 
 		//DEFINIR O TOTAL DE PAGINAS
-		$num_paginas = ceil($num_total/$itens_por_pagina);
+		$num_paginas = ceil($itens_por_pagina);
 
 
 	for ($i=0; $i < count($dados); $i++) { 
@@ -62,21 +64,20 @@ echo '
 			$nome = $dados[$i]['nome'];
 			
 			$contas = $dados[$i]['contas'];
-			
+	
 		
 
 			
 
 echo '
 		<tr>
-		<td>'.$id.'</td>
-	
+
+			
+			<td>'.$id.'</td>
+			
 			
 			<td>'.$nome.'</td>
-			
-			
 			<td>'.$contas.'</td>
-			
 			
 			
 			<td>
@@ -137,11 +138,14 @@ if(@$itens_pag == $itens_por_pagina_1){
 if(@$itens_pag == $itens_por_pagina_2){
 	$classe_ativa_2 = 'classe_ativa_pag';
 }
-
+if(@$itens_pag == $itens_por_pagina_3){
+	$classe_ativa_3 = 'classe_ativa_pag';
+}
 
 echo '
 <a href="'.$caminho_pag.'itens='.@$itens_por_pagina_1.'" class="'.@$classe_ativa_1.'" title="Itens para mostrar na paginação">'.$itens_por_pagina_1.'</a> - 
 <a href="'.$caminho_pag.'itens='.@$itens_por_pagina_2.'" class="'.@$classe_ativa_2.'" title="Itens para mostrar na paginação">'.$itens_por_pagina_2.'</a> -
+<a href="'.$caminho_pag.'itens='.@$itens_por_pagina_3.'" class="'.@$classe_ativa_3.'" title="Itens para mostrar na paginação">'.$itens_por_pagina_3.'</a> -
 <small>Itens</small>
 
 </div>

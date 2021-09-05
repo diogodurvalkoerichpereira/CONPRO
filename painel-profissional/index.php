@@ -1,4 +1,5 @@
 <?php
+require_once("../cabecalho.php");   
  @session_start();
  include_once("../conexao.php");
 
@@ -8,12 +9,9 @@ if($_SESSION['nivel_usuario'] != 'Profissional'){
 
 //ESTRUTURA DO MENU
 $item1 = 'home';
-$item2 = 'clientes';
-$item3 = 'contas';
-$item4 = 'categorias';
-$item5 = 'lancamentos';
-$item6 = 'relatorios';
-
+$item2 = 'contas';
+$item3 = 'categorias';
+$item4 = 'locais';
 
 //CLASSE PARA OS ITENS ATIVOS
 if(@$_GET['acao'] == $item1){
@@ -24,10 +22,6 @@ if(@$_GET['acao'] == $item1){
           $item3ativo = 'active';
         }else if(@$_GET['acao'] == $item4){
           $item4ativo = 'active';
-        }else if(@$_GET['acao'] == $item5){
-          $item5ativo = 'active';
-        }else if(@$_GET['acao'] == $item6){
-          $item6ativo = 'active';
         }
 
  ?>
@@ -88,27 +82,23 @@ if(@$_GET['acao'] == $item1){
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="home.php?acao=<?php echo $item1 ?>" class="nav-link <?php echo $item1ativo ?>">Home</a>
+        <a href="index.php?acao=<?php echo $item1 ?>" class="nav-link <?php echo $item1ativo ?>">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="clientes.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">Clientes</a>
+        <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">Produtos</a>
       </li>
 
         <li class="nav-item d-none d-sm-inline-block">
-        <a href="contas.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">Contas</a>
+        <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">Categorias</a>
       </li>
+
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="categorias.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">Categorias</a>
+        <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">Locais</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="lancamentos.php?acao=<?php echo $item5 ?>" class="nav-link <?php echo $item5ativo ?>">Lançamentos</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="relatorios.php?acao=<?php echo $item6 ?>" class="nav-link <?php echo $item6ativo ?>">Relatórios</a>
-      </li>
+
     </ul>
 
    
@@ -116,10 +106,8 @@ if(@$_GET['acao'] == $item1){
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <?php echo $_SESSION['nome_usuario'] ?>
-          <i class="fas fa-sign-out-alt ml-1"></i>
+      
+     
           
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -127,15 +115,8 @@ if(@$_GET['acao'] == $item1){
 
             <!-- Message Start -->
             <div class="media">
-              <img src="../images/usuario-icone.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  <?php echo $_SESSION['nome_usuario'] ?>
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star text-success"></i></span>
-                </h3>
-                 <small><?php echo $_SESSION['email_usuario'] ?></small>
-               
-              </div>
+              
+             
             </div>
             <!-- Message End -->
           </a>
@@ -143,13 +124,11 @@ if(@$_GET['acao'] == $item1){
           <a href="../logout.php" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../images/logout.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            
               <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Sair do Site
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star text-danger"></i></span>
-                </h3>
-                <p class="text-sm">Voltar para o Login</p>
+                
+               
+                
                 
               </div>
             </div>
@@ -165,19 +144,13 @@ if(@$_GET['acao'] == $item1){
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.php" class="brand-link">
-     
-   
-   
-    </a>
+  
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="../images/usuario-icone-claro.png" class="img-circle elevation-2" alt="User Image">
-        </div>
+       
         <div class="info">
           <a href="#" class="d-block"> <?php echo $_SESSION['nome_usuario'] ?></a>
         </div>
@@ -205,7 +178,7 @@ if(@$_GET['acao'] == $item1){
             <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
-                Clientes
+                Produtos
                 
               </p>
             </a>
@@ -216,34 +189,18 @@ if(@$_GET['acao'] == $item1){
             <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">
               <i class="nav-icon fas fa-th-list"></i>
               <p>
-                Contas
-                
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="categorias.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">
-              <i class="nav-icon fas fa-th-list"></i>
-              <p>
                 Categorias
                 
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="index.php?acao=<?php echo $item5 ?>" class="nav-link <?php echo $item5ativo ?>">
-              <i class="nav-icon fas fa-th-list"></i>
+
+
+           <li class="nav-item">
+            <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">
+              <i class="nav-icon fas fa-city"></i>
               <p>
-                Lançamentos
-                
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="relatorios.php?acao=<?php echo $item6 ?>" class="nav-link <?php echo $item6ativo ?>">
-              <i class="nav-icon fas fa-th-list"></i>
-              <p>
-               Relatórios
+                Locaisss
                 
               </p>
             </a>
@@ -287,10 +244,6 @@ if(@$_GET['acao'] == $item1){
           include_once($item3.'.php');
         }else if(@$_GET['acao'] == $item4){
           include_once($item4.'.php');
-        }else if(@$_GET['acao'] == $item5){
-          include_once($item5.'.php');
-        }else if(@$_GET['acao'] == $item6){
-          include_once($item6.'.php');
         }
 
 

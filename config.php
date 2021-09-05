@@ -30,6 +30,13 @@ $intervalo_envio_email = 70;  //tempo em minutos (enviar de 70 em 70 minutos 480
 
 /* Create table doesn't return a resultset */
 
+$itens_por_pagina = 5;
+$itens_por_pagina_produtos = 25;
+
+//valor que o usuario pode alterar para mostrar a paginação
+$itens_por_pagina_1 = 5;
+$itens_por_pagina_2 = 10;
+$itens_por_pagina_3 = 20;
 
 
 /* Select queries return a resultset */

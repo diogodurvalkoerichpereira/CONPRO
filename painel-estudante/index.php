@@ -1,5 +1,5 @@
 <?php require_once("../cabecalho.php");   ?>
- @session_start();
+
  <?php
 if($_SESSION['nivel_usuario'] != 'Estudante'){
     echo "<script language='javascript'>window.location='../login.php'; </script>";

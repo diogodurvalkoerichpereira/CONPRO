@@ -56,7 +56,8 @@ $itens_pag = intval(@$_GET['itens']);
 					$res = $pdo->query("SELECT * from categorias where id = '$id'");
 					$dados = $res->fetchAll(PDO::FETCH_ASSOC);
 					$nome = $dados[0]['nome'];
-					
+					$contas = $dados[0]['contas'];
+					$imagem = $dados[0]['imagem'];
 					$form = 'form-editar';
 
 				}else{
@@ -82,11 +83,16 @@ $itens_pag = intval(@$_GET['itens']);
 						<input type="text" class="form-control" id="nome" placeholder="Insira o Nome " name="nome" value="<?php echo @$nome ?>" required>
 					</div>
 
-				
+					<div class="form-group">
+
+
+						<label for="exampleFormControlInput1">Contas</label>
+						<input type="text" class="form-control" id="contas" placeholder="Insira a Conta " name="contas" value="<?php echo @$nome ?>" required>
+					</div>
 
 					
 
-						
+					
 
 						<?php if(@$_GET['funcao']=='editar'){ ?>
 						<img src="../images/categorias/<?php echo $imagem ?>" width="150">
