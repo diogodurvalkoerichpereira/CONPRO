@@ -177,10 +177,10 @@ if(@$_GET['acao'] == $item1){
               </p>
             </a>
           </li>
-         
+        
           <li class="nav-item ">
             <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">
-              <i class="nav-icon fas fa-home"></i>
+              <i class="nav-icon fas fa-address-card"></i>
               <p>
                 Clientes
                 
@@ -189,10 +189,10 @@ if(@$_GET['acao'] == $item1){
           </li>
 
 
-
+     
           <li class="nav-item">
             <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">
-              <i class="nav-icon fas fa-shopping-cart"></i>
+              <i class="nav-icon fab fa-creative-commons-share"></i>
               <p>
               Contas
                 
@@ -203,18 +203,18 @@ if(@$_GET['acao'] == $item1){
 
           <li class="nav-item">
             <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">
-              <i class="nav-icon fas fa-th-list"></i>
+              <i class="nav-icon fas fa-bars"></i>
               <p>
                 Categorias
                 
               </p>
             </a>
-          </li>
-
+      
+        
 
            <li class="nav-item">
             <a href="index.php?acao=<?php echo $item5 ?>" class="nav-link <?php echo $item5ativo ?>">
-              <i class="nav-icon fas fa-city"></i>
+              <i class="nav-icon fas fa-plus"></i>
               <p>
                 Lançamentos
                 
