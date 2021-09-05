@@ -8,15 +8,15 @@ $cbbuscar = @$_POST['cbbuscar'];
 
 echo '
 <div class="table-responsive">
-<table class="table table-sm mt-3 tabelas">
+<table class="table table-sm mt-1 tabelas">
 	<thead class="thead-light">
 		<tr>
 			<th scope="col">Código da Conta</th>
-			<th scope="col" class="d-none d-md-block">Conta</th>
-			<th scope="col">Descrição</th>
-			<th scope="col" class="d-none d-md-block">Categoria</th>
+			<th scope="col" >Conta</th>
+			<th scope="col" >Descrição</th>
+			<th scope="col" >Categoria</th>
 			
-			<th scope="col">Ações</th>
+			<th scope="col" > Ações</th>
 		</tr>
 	</thead>
 	<tbody>';
@@ -84,9 +84,9 @@ echo '
 			<td>'.$conta.'</td>
 			
 			
-			<td>'.$descricao.'</td>
+			<td >'.$descricao.'</td>
 			
-			<td>'.$categoria.'</td>
+			<td >'.$categoria.'</td>
 			
 			
 			
