@@ -3,25 +3,24 @@
 require_once("../../conexao.php");
 @session_start();
 
-
-$nome = $_POST['nome'];
 $contas = $_POST['contas'];
+$nome = $_POST['nome'];
 
 
 
 //SCRIPT PARA FOTO NO BANCO
 
-
+ 
 
 
 
 if($contas == ''){
-	echo "Preencha a Descrição!!";
+	echo "Preencha a conta!!";
 	exit();
 }
 
 if($nome == ''){
-	echo "Preencha o Valor!";
+	echo "Preencha o Nome!";
 	exit();
 }
 
@@ -40,9 +39,9 @@ if($nome == ''){
 
 	$res = $pdo->prepare("INSERT into categorias (nome, contas) values (:nome, :contas)");
 
-
-	$res->bindValue(":nome", $nome);
 	$res->bindValue(":contas", $contas);
+	$res->bindValue(":nome", $nome);
+
 	
 	$res->execute();
 

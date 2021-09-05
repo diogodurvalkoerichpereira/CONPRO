@@ -9,9 +9,10 @@ if($_SESSION['nivel_usuario'] != 'Profissional'){
 
 //ESTRUTURA DO MENU
 $item1 = 'home';
-$item2 = 'contas';
-$item3 = 'categorias';
-$item4 = 'locais';
+$item2 = 'clientes';
+$item3 = 'contas';
+$item4 = 'categorias';
+$item5 = 'lancamentos';
 
 //CLASSE PARA OS ITENS ATIVOS
 if(@$_GET['acao'] == $item1){
@@ -22,6 +23,8 @@ if(@$_GET['acao'] == $item1){
           $item3ativo = 'active';
         }else if(@$_GET['acao'] == $item4){
           $item4ativo = 'active';
+        }else if(@$_GET['acao'] == $item5){
+          $item5ativo = 'active';
         }
 
  ?>
@@ -88,15 +91,18 @@ if(@$_GET['acao'] == $item1){
         <a href="index.php?acao=<?php echo $item1 ?>" class="nav-link <?php echo $item1ativo ?>">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">Produtos</a>
+        <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">Clientes</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">Contas</a>
       </li>
 
         <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">Categorias</a>
+        <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">Categorias</a>
       </li>
 
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">Locais</a>
+        <a href="index.php?acao=<?php echo $item5 ?>" class="nav-link <?php echo $item5ativo ?>">Lançamentos</a>
       </li>
 
     </ul>
@@ -161,8 +167,8 @@ if(@$_GET['acao'] == $item1){
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-         
-          <li class="nav-item ">
+
+               <li class="nav-item ">
             <a href="index.php?acao=<?php echo $item1 ?>" class="nav-link <?php echo $item1ativo ?>">
               <i class="nav-icon fas fa-home"></i>
               <p>
@@ -171,14 +177,24 @@ if(@$_GET['acao'] == $item1){
               </p>
             </a>
           </li>
+         
+          <li class="nav-item ">
+            <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Clientes
+                
+              </p>
+            </a>
+          </li>
 
 
 
           <li class="nav-item">
-            <a href="index.php?acao=<?php echo $item2 ?>" class="nav-link <?php echo $item2ativo ?>">
+            <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
-                Produtos
+              Contas
                 
               </p>
             </a>
@@ -186,7 +202,7 @@ if(@$_GET['acao'] == $item1){
 
 
           <li class="nav-item">
-            <a href="index.php?acao=<?php echo $item3 ?>" class="nav-link <?php echo $item3ativo ?>">
+            <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">
               <i class="nav-icon fas fa-th-list"></i>
               <p>
                 Categorias
@@ -197,10 +213,10 @@ if(@$_GET['acao'] == $item1){
 
 
            <li class="nav-item">
-            <a href="index.php?acao=<?php echo $item4 ?>" class="nav-link <?php echo $item4ativo ?>">
+            <a href="index.php?acao=<?php echo $item5 ?>" class="nav-link <?php echo $item5ativo ?>">
               <i class="nav-icon fas fa-city"></i>
               <p>
-                Locaisss
+                Lançamentos
                 
               </p>
             </a>
@@ -244,6 +260,8 @@ if(@$_GET['acao'] == $item1){
           include_once($item3.'.php');
         }else if(@$_GET['acao'] == $item4){
           include_once($item4.'.php');
+        }else if(@$_GET['acao'] == $item5){
+          include_once($item5.'.php');
         }
 
 

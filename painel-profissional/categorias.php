@@ -57,7 +57,7 @@ $itens_pag = intval(@$_GET['itens']);
 					$dados = $res->fetchAll(PDO::FETCH_ASSOC);
 					$nome = $dados[0]['nome'];
 					$contas = $dados[0]['contas'];
-					$imagem = $dados[0]['imagem'];
+			
 					$form = 'form-editar';
 
 				}else{
@@ -94,9 +94,7 @@ $itens_pag = intval(@$_GET['itens']);
 
 					
 
-						<?php if(@$_GET['funcao']=='editar'){ ?>
-						<img src="../images/categorias/<?php echo $imagem ?>" width="150">
-						<?php } ?>
+					
 
 
 						<div align="center" id="mensagem" class="">
