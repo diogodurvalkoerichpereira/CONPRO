@@ -1,7 +1,7 @@
 <?php 
 
 require_once("../../conexao.php");
-$pagina = 'pedidos';
+$pagina = 'livrorazão';
 
 
 @session_start();
@@ -12,13 +12,14 @@ echo '
 <table class="table table-sm mt-3">
 	<thead class="thead-light">
 		<tr>
-			<th scope="col">Hora</th>
-			<th scope="col">Previsão Chegada</th>
-			<th scope="col">Total</th>
-			<th scope="col">Tipo PGTO</th>
-			<th scope="col">Status</th>
-			<th scope="col">Pago</th>
-			<th scope="col">Produtos</th>
+			<th scope="col">id</th>
+			<th scope="col">data</th>
+			<th scope="col">conta</th>
+			<th scope="col">historico</th>
+			<th scope="col">debito</th>
+			<th scope="col">credito</th>
+			<th scope="col">saldo</th>
+			<th scope="col">dc</th>
 						
 		</tr>
 	</thead>

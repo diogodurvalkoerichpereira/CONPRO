@@ -4,12 +4,12 @@
 $email = 'diogodurvalkoerichpereira@gmail.com';
 $email_adm = $email;
 
-$url_site = "localhost/";
+$url_site = "localhost";
 
 //VARIAVEIS DO BANCO DE DADOS
 $servidor = 'localhost';
 $usuario = 'root';
-$senha = '';
+$senha = '1234';
 $banco = 'contabil';
 
 /*

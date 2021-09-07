@@ -104,12 +104,12 @@ echo '
               foreach ($dados[$i] as $key => $value) {
               }
 
-              $id_produto = $dados[$i]['id_produto']; 
+              $id_contas = $dados[$i]['id_contas']; 
               $quantidade = $dados[$i]['quantidade'];
               $id_carrinho = $dados[$i]['id'];
 
 
-              $res_p = $pdo->query("SELECT * from produtos where id = '$id_produto' ");
+              $res_p = $pdo->query("SELECT * from contas where id = '$id_produto' ");
               $dados_p = $res_p->fetchAll(PDO::FETCH_ASSOC);
               $nome_produto = $dados_p[0]['nome'];  
               $valor = $dados_p[0]['valor'];
@@ -119,7 +119,7 @@ echo '
 
              echo '
 
-              <li><img src="../images/produtos/'.$imagem.'" width="30">
+              <li><img src="../images/contas/'.$imagem.'" width="30">
               <h4>'.$quantidade.' - ' .$nome_produto.'</h4><h5>'.$total_item .'</h5></li>';
 
 

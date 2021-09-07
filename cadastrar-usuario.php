@@ -50,6 +50,7 @@ $res = $pdo->prepare("INSERT into usuarios (nome, cpf, telefone, usuario, senha,
     $res->bindValue(":usuario", $email);
     $res->bindValue(":cpf", $cpf);
     $res->bindValue(":telefone", $telefone);
+    $res->bindValue(":senha", $senha);
 
     $res->execute();
 

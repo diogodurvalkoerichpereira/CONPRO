@@ -1,12 +1,7 @@
-<?php 
+<?php
 
-include_once("conexao.php");
 
-if(isset($_POST['email2']) and $_POST['email2'] != ''){
-    $email_rec = $_POST['email2'];
-}
- ?>
-
+?>
 <head>
     <title>CON PRO - Login</title>
     <meta name="format-detection" content="telephone=no">
@@ -21,6 +16,7 @@ if(isset($_POST['email2']) and $_POST['email2'] != ''){
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="css/login.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//painel-adm/offcanvas.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="icon" href="images/favicon-nova.ico" type="image/x-icon">
 
